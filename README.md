@@ -1,5 +1,5 @@
 # Portfolio Template
-![preview]("D:...\repository_photos\preview.png")
+![preview]("https://github.com/ImJustCri/Portfolio/blob/main/public/projects_photos/cmi.png")
 
 This repository features my own portfolio made in Astro.
 
