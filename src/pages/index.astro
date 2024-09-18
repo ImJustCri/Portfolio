@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Socials from '../components/Socials.astro';
+---
+
+<Layout title="ImJustCri">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<main>
+		<div class="logo_div">
+			<img src="logo.png" alt="logo" class="logo"/>
+		</div>
+
+		<h1 class="text-gradient">ItsJustCri</h1>
+
+		<p class="about_me">
+			Italian IT Student and Developer
+		</p>
+
+		<div class="socials">
+			<Socials
+			title="github"
+			href="https://github.com/ImJustCri"
+			icon="bx bxl-github"
+			/>
+
+			<Socials
+			title="figma"
+			href="https://github.com/ImJustCri"
+			icon="bx bxl-figma"
+			/>
+		</div>
+
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Capacità Merito Inclusione"
+				body="Website made and mantained using WordPress"
+				imagePath='/projects_photos/cmi.png'
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Progetto 2"
+				body="Lorem Ipsum blah blah blah blah"
+				imagePath='/projects_photos/cmi.png'
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Progetto 3"
+				body="Lorem Ipsum blah blah blah blah"
+				imagePath='/projects_photos/cmi.png'
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Progetto 4"
+				body="Lorem Ipsum blah blah blah blah"
+				imagePath='/projects_photos/cmi.png'
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+
+	html {
+		background-color: black;
+	}
+
+	.logo_div {
+		margin: auto;
+		text-align: center;
+	}
+	
+	.logo {
+		width: 88px;
+		height: auto;
+		padding-top: 40px;
+	}
+
+	body {
+		background-image: url(pattern.svg);
+    	background-repeat: no-repeat;
+    	background-color: black;
+    	background-position: -32px;
+    	background-size: cover;
+		margin: 0;
+		padding: 0;
+	}
+	
+	main {
+		margin: auto;
+		padding-top: 4rem;
+		width: 1800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	h1 {
+		font-size: clamp(2.369rem, 3vw + 1rem, 3.157rem);
+		font-weight: 600;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 0;
+		margin-top: 16px;
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+
+	.about_me {
+		text-align: center;
+		font-size: 1.25rem;
+	}
+
+	.socials {
+		display: flex;
+		width: auto;
+		max-width: 128px;
+		margin: auto;
+	}
+
+	@media screen and (max-width: 1230px) {
+		.link-card-grid {
+			grid-template-columns: repeat(1, minmax(24ch, 1fr));
+		}
+
+		body {
+    		background-position: -1000px;
+		}
+	}
+</style>
