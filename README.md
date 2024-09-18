@@ -1,5 +1,5 @@
 # Portfolio Template
-![preview](https://github.com/ImJustCri/Portfolio/blob/main/public/projects_photos/cmi.png)
+![preview](https://github.com/ImJustCri/Portfolio/blob/main/public/repository_photos/preview.png)
 
 This repository features my own portfolio made in Astro.
 
