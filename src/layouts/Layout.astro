@@ -35,6 +35,23 @@ const { title } = Astro.props;
 			white 60%
 		);
 	}
+
+	* {
+		cursor: none;
+	}
+
+	.cursor {
+		width: 16px;
+		height: 16px;
+		background: white;
+		border-radius: 50%;
+		position: absolute;
+		transition-duration: 100ms;
+		transition-timing-function: ease-out;
+		pointer-events: none;
+		box-shadow: 0 0 16px 1px rgba(var(--accent));
+	}
+
 	html {
 		font-family: 'Poppins', system-ui, sans-serif;
 		background: #13151a;
