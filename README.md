@@ -1,5 +1,5 @@
 # Portfolio Template
-![preview]("D:\Astro_Sites\Portfolio\public\repository_photos\preview.png")
+![preview]("D:...\repository_photos\preview.png")
 
 This repository features my own portfolio made in Astro.
 
