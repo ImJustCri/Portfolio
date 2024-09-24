@@ -68,6 +68,16 @@ import Socials from '../components/Socials.astro';
 
 	html {
 		background-color: black;
+		animation: appear 1000ms ease-in;
+	}
+
+	@keyframes appear {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 
 	.logo_div {
@@ -89,6 +99,13 @@ import Socials from '../components/Socials.astro';
     	background-size: cover;
 		margin: 0;
 		padding: 0;
+		animation: bgSlide 10000ms infinite alternate;
+	}
+
+	@keyframes bgSlide {
+			to {
+				background-position: 40px;
+			}
 	}
 	
 	main {
@@ -151,6 +168,14 @@ import Socials from '../components/Socials.astro';
 
 		body {
     		background-position: -1000px;
+			animation: bgSlide 10000ms infinite alternate;
 		}
+
+		@keyframes bgSlide {
+			to {
+				background-position: -800px;
+			}
+		}
+		
 	}
 </style>
