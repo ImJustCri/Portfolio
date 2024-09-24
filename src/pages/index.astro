@@ -8,57 +8,52 @@ import Socials from '../components/Socials.astro';
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 	<main>
-		<div class="logo_div">
-			<img src="logo.png" alt="logo" class="logo"/>
+		<div class="cover">
+			<div class="coverContent">
+				<div class="logo_div">
+					<img src="logo.png" alt="logo" class="logo"/>
+				</div>
+		
+				<h1 class="text-gradient">ImJustCri</h1>
+		
+				<p class="about_me">
+					Italian IT Student and Developer
+				</p>
+		
+				<div class="socials">
+					<Socials
+					title="github"
+					href="https://github.com/ImJustCri"
+					icon="bx bxl-github"
+					/>
+		
+					<Socials
+					title="figma"
+					href="https://github.com/ImJustCri"
+					icon="bx bxl-figma"
+					/>
+				</div>
+			</div>
+			
 		</div>
 
-		<h1 class="text-gradient">ItsJustCri</h1>
-
-		<p class="about_me">
-			Italian IT Student and Developer
-		</p>
-
-		<div class="socials">
-			<Socials
-			title="github"
-			href="https://github.com/ImJustCri"
-			icon="bx bxl-github"
-			/>
-
-			<Socials
-			title="figma"
-			href="https://github.com/ImJustCri"
-			icon="bx bxl-figma"
-			/>
-		</div>
-
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Capacità Merito Inclusione"
-				body="Website made and mantained using WordPress"
-				imagePath='/projects_photos/cmi.png'
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Equivocal"
-				body="Puzzle-based videogame programmed in Godot 4"
-				imagePath='/projects_photos/equivocal.png'
-			/>
-			<Card
-				href="https://www.figma.com/proto/M03SsYJp4BAGZaz7NfkDnj/Food-Delivery-App?page-id=1%3A3&node-id=69-379&node-type=frame&viewport=-2164%2C252%2C0.48&t=xoJHMcWoDkufL81V-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=69%3A379"
-				title="Delivery App UI"
-				body="UI Concept made on Figma"
-				imagePath='/projects_photos/deliveryapp.png'
-			/>
-			<!-- <Card
-				href="https://astro.build/chat/"
-				title="Progetto 4"
-				body="Lorem Ipsum blah blah blah blah"
-				imagePath='/projects_photos/cmi.png'
-			/> -->
-		</ul>
+		<!-- <div class="description">
+			<h2>Who Am I?</h2>
+			<p>I'm an enthusiastic IT student from Italy with a strong passion 
+				for web, game, and app development. 
+				I am particularly focused on Free and Open Source Software (FOSS), 
+				as I believe in the power of collaborative innovation and accessibility in technology.
+				My goal is to create impactful and user-friendly applications that contribute to the open-source community.</p>
+		</div> -->
 	</main>
+
+	<div class="projects_button">
+		<div class="text-centered">
+			<a href="projects">
+				<p>Browse my Projects</p>
+			</a>
+		</div>
+	</div>
 
 	<script src="/src/scripts/cursor.js"></script>
 	<div class="cursor"></div>
@@ -68,7 +63,18 @@ import Socials from '../components/Socials.astro';
 
 	html {
 		background-color: black;
+		animation: fadeIn 1.5s forwards;
+		opacity: 0;
+		overflow: hidden;
 	}
+
+	
+	@keyframes fadeIn {
+    	to {
+    	    opacity: 1;
+    	}
+	}
+
 
 	.logo_div {
 		margin: auto;
@@ -101,6 +107,39 @@ import Socials from '../components/Socials.astro';
 		line-height: 1.6;
 	}
 
+	.projects_button {
+		width: 160px;
+		height: 40px;
+		/* background: #23262d; */
+		position: fixed;
+		top: 94vh;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.text-centered {
+		justify-content: center;
+        justify-items: center;
+        justify-self: center;
+		align-items: center;
+	}
+
+	.text-centered > a {
+		transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		color: rgb(121, 121, 121);
+		text-decoration: none;
+	}
+
+	.text-centered > a:hover {
+		transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		color: rgb(255, 255, 255);
+		text-decoration: underline;
+	}
+
 	h1 {
 		font-size: clamp(2.369rem, 3vw + 1rem, 3.157rem);
 		font-weight: 600;
@@ -117,6 +156,7 @@ import Socials from '../components/Socials.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
+
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
@@ -144,13 +184,24 @@ import Socials from '../components/Socials.astro';
 		margin: auto;
 	}
 
-	@media screen and (max-width: 1230px) {
-		.link-card-grid {
-			grid-template-columns: repeat(1, minmax(24ch, 1fr));
-		}
+	.cover {
+		display: flex;
+		height: 100vh;
+		justify-content: center;
+		justify-items: center;
+		justify-self: center;
+		align-items: center;
+		transform: translateY(-10%);
+	}
 
-		body {
-    		background-position: -1000px;
+	.cover_content {
+		margin: 0;
+    	padding: 0;
+	}
+
+	@media screen and (max-width: 464px) {
+		.description {
+			padding: 32px;
 		}
 	}
 </style>
