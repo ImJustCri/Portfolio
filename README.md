@@ -30,7 +30,7 @@ gh repo clone ImJustCri/Portfolio
 
 Then execute the following commands, in order:
 ```bash
-cd ImJustCri
+cd Portfolio
 npm i
 ```
 
