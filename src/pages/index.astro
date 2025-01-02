@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Socials from '../components/Socials.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="ImJustCri">
@@ -9,7 +10,7 @@ import Socials from '../components/Socials.astro';
 
 	<main>
 		<div class="logo_div">
-			<img src="logo.png" alt="logo" class="logo"/>
+			<img src="/portfolio/logo.png" alt="logo" class="logo"/>
 		</div>
 
 		<h1 class="text-gradient">ImJustCri</h1>
@@ -19,16 +20,27 @@ import Socials from '../components/Socials.astro';
 		</p>
 
 		<div class="socials">
-			<Socials
-			title="github"
-			href="https://github.com/ImJustCri"
-			icon="bx bxl-github"
-			/>
+			<div style="display: flex; gap: 12px">
+				<Socials
+					title="github"
+					href="https://github.com/ImJustCri"
+					icon="bx bxl-github"
+					name= "GitHub"
+				/>
+
+				<Socials
+					title="figma"
+					href="https://github.com/ImJustCri"
+					icon="bx bxl-figma"
+					name= "Figma"
+				/>				
+			</div>
 
 			<Socials
-			title="figma"
-			href="https://github.com/ImJustCri"
-			icon="bx bxl-figma"
+				title="about me"
+				href="#aboutme"
+				icon="bx bxs-user-badge"
+				name= "About me"
 			/>
 		</div>
 
@@ -37,30 +49,28 @@ import Socials from '../components/Socials.astro';
 				href="https://capacitameritoinclusione.it"
 				title="Capacità Merito Inclusione"
 				body="Website made and mantained using WordPress"
-				imagePath="https://raw.githubusercontent.com/ImJustCri/Portfolio/refs/heads/main/public/projects_photos/cmi.png"
+				imagePath="/portfolio/projects_photos/cmi.png"
 			/>
 			<Card
-				href="#"
-				title="Equivocal"
-				body="Puzzle-based videogame programmed in Godot 4 (Not Released Yet)"
-				imagePath="https://raw.githubusercontent.com/ImJustCri/Portfolio/refs/heads/main/public/projects_photos/equivocal.png"
+				href="https://github.com/ImJustCri/bancaonline"
+				title="BancaOnline"
+				body="A bank dashboard made in Astro for a school project"
+				imagePath="/portfolio/projects_photos/bancaonline.png"
 			/>
 			<Card
 				href="https://www.figma.com/proto/M03SsYJp4BAGZaz7NfkDnj/Food-Delivery-App?page-id=1%3A3&node-id=69-379&node-type=frame&viewport=-2164%2C252%2C0.48&t=xoJHMcWoDkufL81V-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=69%3A379"
 				title="Delivery App UI"
 				body="UI Concept made on Figma"
-				imagePath="https://raw.githubusercontent.com/ImJustCri/Portfolio/refs/heads/main/public/projects_photos/deliveryapp.png"
+				imagePath="/portfolio/projects_photos/deliveryapp.png"
 			/>
-			<!-- <Card
-				href="https://astro.build/chat/"
-				title="Progetto 4"
-				body="Lorem Ipsum blah blah blah blah"
-				imagePath="https://raw.githubusercontent.com/ImJustCri/Portfolio/refs/heads/main/public/projects_photos/equivocal.png"
-			/> -->
 		</ul>
 	</main>
 
-	<script src="/src/scripts/cursor.js"></script>
+	<section id="aboutme">
+		<Footer></Footer>
+	</section>
+
+	<script src="/src/scripts/cursor.ts"></script>
 	<div class="cursor"></div>
 </Layout>
 
@@ -92,7 +102,7 @@ import Socials from '../components/Socials.astro';
 	}
 
 	body {
-		background-image: url(pattern.svg);
+		background-image: url(/portfolio/pattern.svg);
     	background-repeat: no-repeat;
     	background-color: black;
     	background-position: -32px;
@@ -116,6 +126,9 @@ import Socials from '../components/Socials.astro';
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+		position: relative;
+  		z-index: 1;
+  		min-height: 100vh;
 	}
 
 	h1 {
@@ -144,6 +157,7 @@ import Socials from '../components/Socials.astro';
 
 	.link-card-grid {
 		display: grid;
+		align-items: center;
 		grid-template-columns: repeat(3, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
@@ -155,10 +169,17 @@ import Socials from '../components/Socials.astro';
 	}
 
 	.socials {
+		/* background: white; */
 		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
 		width: auto;
-		max-width: 128px;
+		height: fit-content;
+		gap: 12px;
 		margin: auto;
+		margin-bottom: 128px;
+		margin-top: 32px;
 	}
 
 	@media screen and (max-width: 1230px) {
@@ -176,6 +197,19 @@ import Socials from '../components/Socials.astro';
 				background-position: -800px;
 			}
 		}
+
+		.socials {
+			flex-direction: column;
+		}
 		
 	}
+
+	.footer {
+  		background: #746060;
+  		position: sticky;
+  		bottom: 0;
+  		height: 300px;
+  		color: #eee;
+	}
+
 </style>

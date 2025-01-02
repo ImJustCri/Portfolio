@@ -28,7 +28,6 @@ const { href, title, body, imagePath } = Astro.props;
 	.link-card {
 		list-style: none;
 		display: flex;
-		padding: 1px;
 		background-color: #23262d0;
 		background-image: none;
 		background-size: 400%;
@@ -41,7 +40,7 @@ const { href, title, body, imagePath } = Astro.props;
 		width: 100%;
 		text-decoration: none;
 		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
+		padding: 8px;
 		border-radius: 8px;
 		color: white;
 		background-color: #23262d;
@@ -68,7 +67,12 @@ const { href, title, body, imagePath } = Astro.props;
 
 	.projectImage {
 		width: 100%;
-		border-radius: 8px;
+		height: auto;
+		border-radius: 4px;
 		margin-bottom: 32px;
+	}
+
+	.content {
+		margin: 0 16px 32px 16px;
 	}
 </style>
