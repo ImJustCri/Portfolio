@@ -1,0 +1,108 @@
+---
+import Socials from "./Socials.astro"
+---
+
+<footer>
+    <div id="flex">
+        <box-icon type='solid' name='user-badge' color="white" size="40px"></box-icon>
+        <h1>About Me</h1>
+    </div>
+    
+    <div id="grid">
+        <div id="left">
+    
+            <p>
+                I'm an IT student based in Italy. 
+                <br>I'm currently focusing on Web Development with Astro/TypeScript 
+                <br>and Android App Development with Kotlin.
+                <br>Besides that, I am a self taught UI Designer using Figma and PenPot
+            </p>
+        </div>
+    
+        <div id="right">
+            <p>
+                Languages I know include: 
+                <br>TypeScript, JavaScript, Java, Python, GDScript, Kotlin...
+                <br>
+                <br>If you want to know more, please check my GitHub profile
+            </p>
+            
+            <Socials
+                title="github"
+                href="https://github.com/ImJustCri"
+                icon="bx bxl-github"
+                name= "GitHub"
+            />
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        padding: 64px 16px;
+        background: #23262d;
+        color: #868c96;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    }
+
+p {
+    margin: 40px 0;
+    text-align: left;
+    font-size: 20px;
+}
+
+#flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 64px;
+}
+
+h1 {
+    text-align: left;
+}
+
+#left {
+    max-width: 800px;
+    margin: 0 64px;
+}
+
+#right {
+    max-width: 800px;
+    margin: 0 64px;
+}
+
+@media screen and (max-width: 1230px) {
+    #left {
+        margin: 0 16px;
+    }
+
+    #right {
+        margin: 0 16px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #flex {
+        gap: 8px;
+        margin: 16px;
+    }
+
+    #grid {
+        grid-template-columns: repeat(auto-fit, minmax(32ch, 1fr));
+    }
+
+    p {
+        margin: 24px 0;
+    }
+}
+
+</style>
