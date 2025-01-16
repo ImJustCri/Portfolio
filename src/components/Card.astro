@@ -4,9 +4,11 @@ interface Props {
 	body: string;
 	href: string;
 	imagePath: string;
+	chip_label: string;
+	chip_style: string;
 }
 
-const { href, title, body, imagePath } = Astro.props;
+const { href, title, body, imagePath, chip_label, chip_style } = Astro.props;
 ---
 
 <li class="link-card">
@@ -20,6 +22,10 @@ const { href, title, body, imagePath } = Astro.props;
 			<p>
 				{body}
 			</p>
+
+			<div id="chip" style={chip_style}>
+				{chip_label}
+			</div>
 		</div>
 	</a>
 
@@ -48,11 +54,12 @@ const { href, title, body, imagePath } = Astro.props;
 	}
 	h2 {
 		margin: 0;
-		font-size: 1.25rem;
+		font-size: 1.35rem;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 	p {
 		margin-top: 0.5rem;
+		color: #9ba7b9;
 		margin-bottom: 0;
 	}
 	.link-card:is(:hover, :focus-within) {
@@ -74,5 +81,17 @@ const { href, title, body, imagePath } = Astro.props;
 
 	.content {
 		margin: 0 16px 32px 16px;
+	}
+
+	#chip {
+		margin-top: 24px;
+		width: fit-content;
+		min-width: 32px;
+		height: 16px;
+		padding: 16px 16px;
+		background: rgb(185, 74, 74);
+		border-radius: 24px;
+		display: flex;
+		align-items: center;
 	}
 </style>
