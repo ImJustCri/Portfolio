@@ -13,6 +13,7 @@ const { title } = Astro.props;
 		<meta name="description" content="ImJustCri" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="Portfolio/public/favicon.ico">
+		<link rel="stylesheet" href="Portfolio/src/stylesheets/style.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -20,47 +21,5 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
-<style is:global>
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-	:root {
-		--accent: 51, 81, 214;
-		--accent-light: 102, 125, 228;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-
-	* {
-		cursor: none;
-	}
-
-	.cursor {
-		visibility: hidden;
-		width: 16px;
-		height: 16px;
-		background: white;
-		border-radius: 50%;
-		position: absolute;
-		transition-duration: 50ms;
-		transition-timing-function: ease-out;
-		pointer-events: none;
-		box-shadow: 0 0 16px 1px rgba(var(--accent));
-	}
-
-	html {
-		font-family: 'Poppins', system-ui, sans-serif;
-		background: #13151a;
-	}
-
-	a {
-		text-decoration: none;
-	}
-</style>
 
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

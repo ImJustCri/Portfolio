@@ -1,30 +1,27 @@
 ---
+import { PROJECTS } from "../config/config";
+
 interface Props {
-	title: string;
-	body: string;
-	href: string;
-	imagePath: string;
-	chip_label: string;
-	chip_style: string;
+	i: number;
 }
 
-const { href, title, body, imagePath, chip_label, chip_style } = Astro.props;
+const { i } = Astro.props;
 ---
 
 <li class="link-card">
 	
-	<a href={href}>
-		<img src={imagePath} alt="" class="projectImage">
+	<a href= "">
+		<img src={PROJECTS[i].imagePath} alt="" class="projectImage">
 		<div class="content">
 			<h2>
-				{title}
+				{PROJECTS[i].title}
 			</h2>
 			<p>
-				{body}
+				{PROJECTS[i].body}
 			</p>
 
-			<div id="chip" style={chip_style}>
-				{chip_label}
+			<div id="chip" style={PROJECTS[i].chip_style}>
+				{PROJECTS[i].chip_label}
 			</div>
 		</div>
 	</a>
