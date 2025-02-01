@@ -3,7 +3,7 @@ import Socials from "./Socials.astro"
 ---
 
 <footer>
-    <div id="flex">
+    <!-- <div id="flex">
         <box-icon type='solid' name='user-badge' color="white" size="40px"></box-icon>
         <h1>About Me</h1>
     </div>
@@ -34,17 +34,53 @@ import Socials from "./Socials.astro"
                 name= "GitHub"
             />
         </div>
+    </div> -->
+    <div class="w800">
+        <div id="flex">
+            <box-icon type='solid' name='user-badge' color="white" size="40px"></box-icon>
+            <h1>About Me</h1>
+        </div>
+        
+        <p>
+            I'm an IT student based in Italy. 
+            <br>I'm currently focusing on Web Development with Astro/TypeScript 
+            and Android App Development with Kotlin.
+            Besides that, I am a self taught UI Designer using Figma and PenPot
+        </p>
+
+        <p>
+            Languages I know include: 
+            TypeScript, JavaScript, Java, Python, GDScript, Kotlin and Dart.
+            <br>If you want to know more, please check my GitHub profile
+        </p>
+
+        <Socials
+            title="github"
+            href="https://github.com/ImJustCri"
+            icon="bx bxl-github"
+            name= "GitHub"
+        />
     </div>
 </footer>
 
 <style>
     footer {
+        background-image: url(/Portfolio/pattern.svg);
+        background-repeat: no-repeat;
         padding: 64px 16px;
-        background: #23262d;
+        background-color: #23262d5b;
         color: #868c96;
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
         margin-top: 32px;
+        min-height: 300px;
+        max-height: 1200px;
+    }
+
+    .w800 {
+        width: 800px;
+        max-width: 800px;
+        margin: auto;
     }
 
     #grid {
@@ -55,14 +91,13 @@ import Socials from "./Socials.astro"
 p {
     margin: 40px 0;
     text-align: left;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 #flex {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-left: 64px;
 }
 
 h1 {
@@ -81,17 +116,8 @@ h1 {
 }
 
 @media screen and (max-width: 1230px) {
-    #left {
-        margin: 0 16px;
-    }
-
-    #right {
-        margin: 0 16px;
-    }
-
     #flex {
         gap: 8px;
-        margin: 16px;
     }
 
     #grid {
@@ -103,7 +129,13 @@ h1 {
     }
 
     footer {
-        padding: 32px 16px 80px 16px;
+        padding: 32px 24px 80px 24px;
+    }
+
+    .w800 {
+        width: auto;
+        max-width: 100vw;
+        margin: auto;
     }
 }
 

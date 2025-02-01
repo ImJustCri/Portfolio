@@ -19,6 +19,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
+
+		<script src="/src/scripts/cursor.ts"></script>
+		<div class="cursor"></div>
 	</body>
 </html>
 
@@ -40,9 +43,11 @@ const { title } = Astro.props;
 	);
 }
 
-* {
+
+*:focus-within, *:hover {
 	cursor: none;
 }
+
 
 .cursor {
 	visibility: hidden;

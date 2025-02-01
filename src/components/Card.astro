@@ -28,6 +28,11 @@ const { i } = Astro.props;
 
 </li>
 <style>
+
+	* {
+		cursor: none;
+	}
+
 	.link-card {
 		list-style: none;
 		display: flex;
@@ -64,6 +69,7 @@ const { i } = Astro.props;
 		background-image: var(--accent-gradient);
 		transform: scale(1.01);
 	}
+
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light));
 		transform: scale(1.01);
