@@ -54,6 +54,7 @@ const { i } = Astro.props;
 		background-color: #23262d;
 		opacity: 0.8;
 	}
+
 	h2 {
 		margin: 0;
 		font-size: 1.35rem;
@@ -70,9 +71,12 @@ const { i } = Astro.props;
 		transform: scale(1.01);
 	}
 
+	.link-card:active {
+		transform: scale(0.98);
+	}
+
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light));
-		transform: scale(1.01);
 	}
 
 	.projectImage {

@@ -73,6 +73,15 @@ import Footer from '../components/Footer.astro';
 		}
 	}
 
+	@keyframes scale {
+		from {
+			transform: scale(1.01);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+
 	.logo_div {
 		margin: auto;
 		text-align: center;
@@ -114,6 +123,7 @@ import Footer from '../components/Footer.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
+	
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
@@ -128,6 +138,7 @@ import Footer from '../components/Footer.astro';
 		grid-template-columns: repeat(3, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+		animation: scale 1000ms ease-in;
 	}
 
 	.about_me {
