@@ -30,7 +30,7 @@ export const PROJECTS = [
         title: "Delivery App UI",
         body: "UI Concept made on Figma",
         imagePath: PROJECT_PICTURES[2],
-        chip_label: 'WordPress',
-        chip_style: 'background: #3858E9',
+        chip_label: 'Figma',
+        chip_style: 'background: #dd4848',
     },
 ];
