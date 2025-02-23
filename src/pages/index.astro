@@ -34,6 +34,20 @@ import Presentation from '../components/Presentation.astro';
 			opacity: 1;
 		}
 	}
+
+	@keyframes scale {
+		from {
+			transform: scale(1.01);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+
+	.logo_div {
+		margin: auto;
+		text-align: center;
+	}
 	
 	main {
 		margin: auto;
@@ -47,8 +61,46 @@ import Presentation from '../components/Presentation.astro';
   		max-height: 100vh;
 	}
 
-	.centeredDiv {
-		margin: auto;
+	h1 {
+		font-size: clamp(2.369rem, 3vw + 1rem, 3.157rem);
+		font-weight: 600;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 0;
+		margin-top: 16px;
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+
+	.link-card-grid {
+		display: grid;
+		align-items: center;
+		grid-template-columns: repeat(3, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+		animation: scale 1000ms ease-in;
+	}
+
+	.about_me {
+		text-align: center;
+		font-size: 1.25rem;
+	}
+
+	.socials {
 		display: flex;
 		height: 85vh;
 		justify-content: center;

@@ -67,9 +67,12 @@ const { i } = Astro.props;
 	}
 
 	.link-card:active {
-        transform: scale(0.98);
-    }
+		transform: scale(0.98);
+	}
 
+	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--accent-light));
+	}
 
 	.projectImage {
 		width: 100%;
