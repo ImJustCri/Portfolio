@@ -10,7 +10,7 @@ const { i } = Astro.props;
 
 <li class="link-card">
 	
-	<a href= "">
+	<a href= {PROJECTS[i].href}>
 		<img src={PROJECTS[i].imagePath} alt="" class="projectImage">
 		<div class="content">
 			<h2>
@@ -28,10 +28,6 @@ const { i } = Astro.props;
 
 </li>
 <style>
-
-	* {
-		cursor: none;
-	}
 
 	.link-card {
 		list-style: none;
@@ -70,10 +66,10 @@ const { i } = Astro.props;
 		transform: scale(1.01);
 	}
 
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-		transform: scale(1.01);
-	}
+	.link-card:active {
+        transform: scale(0.98);
+    }
+
 
 	.projectImage {
 		width: 100%;

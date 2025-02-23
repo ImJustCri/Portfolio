@@ -19,9 +19,6 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
-
-		<script src="/src/scripts/cursor.ts"></script>
-		<div class="cursor"></div>
 	</body>
 </html>
 
@@ -43,26 +40,6 @@ const { title } = Astro.props;
 	);
 }
 
-
-*:focus-within, *:hover {
-	cursor: none;
-}
-
-
-.cursor {
-	visibility: hidden;
-	width: 16px;
-	height: 16px;
-	background: white;
-	border-radius: 50%;
-	position: absolute;
-	transition-duration: 50ms;
-	transition-timing-function: ease-out;
-	pointer-events: none;
-	box-shadow: 0 0 16px 1px rgba(var(--accent));
-	z-index: 999;
-}
-
 html {
 	font-family: 'Poppins', system-ui, sans-serif;
 	background: #13151a;
@@ -75,16 +52,24 @@ a {
 body {
 	background-image: url(/Portfolio/pattern.svg);
 	background-repeat: no-repeat;
-	background-position: -32px;
+	background-position: 0px;
 	background-size: cover;
 	margin: 0;
 	padding: 0;
-	animation: bgSlide 20000ms infinite alternate;
+	/* animation: bgSlide 20000ms infinite alternate; */
 }
 
 @keyframes bgSlide {
 		to {
 			background-position: 40px;
 		}
+}
+
+@media screen and (max-width: 1230px) {
+
+	body {
+		background-position: -400px;
+	}
+
 }
 </style>

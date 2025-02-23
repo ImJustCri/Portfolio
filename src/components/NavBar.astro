@@ -1,0 +1,174 @@
+---
+import { LOGO, SHORT_DESCRIPTION, NAME } from '../config/config';
+---
+
+<nav>
+    <a href="/Portfolio/" id="index">
+        <div class="left">
+            <img src={LOGO} alt="">
+            <h3>ImJustCri</h3>
+        </div>
+    </a>
+
+    <div class="right">
+        <i class="menu" id="activate"></i>
+        <a href="../Portfolio/projects" id="projects_button"><li><i class="bx bx-code"></i> Projects</li></a>
+        <a href="../Portfolio/aboutme" id="aboutme_button"><li><i class="bx bxs-user-badge"></i> About Me</li></a> 
+    </div>
+</nav>
+
+<div id="sidebar">
+    <a href="projects" id="projects"><li><i class="bx bx-code"></i> Projects</li></a>
+    <a href="aboutme" id="aboutme"><li><i class="bx bxs-user-badge"></i> About Me</li></a> 
+</div>
+
+<style>
+
+    #sidebar {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: fit-content;
+        width: fit-content;
+        padding: 16px;
+        gap: 16px;
+        margin: 0;
+        padding-top: 40px;
+        background: #23262d7c;
+        backdrop-filter: blur(20px);
+    }
+    
+    nav {
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        top: 2rem;
+		padding: 0 32px;
+		color: white;
+		font-size: 20px;
+  		z-index: 999;
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .left, .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 0 24px;
+        background: #23262d7c;
+        width: fit-content;
+        border-radius: 24px;
+        backdrop-filter: blur(10px);
+        transition: .5s;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+
+    .right {
+        display: flex;
+        list-style: none;
+        gap: 32px;
+    }
+
+    li {
+        border-radius: 16px;
+        transition: .5s;
+        gap: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    li:hover {
+        background: #23262d;
+        padding: 8px 24px;
+    }
+
+    .menu {
+        font-size: 32px;
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        margin: none;
+        padding: none;
+        color: white;
+    }
+
+    @media screen and (max-width: 800px) {
+        nav {
+            padding: 0 16px;
+        }
+
+        #sidebar {
+                left: -600px;
+                width: fit-content;
+                transition: left 0.25s;
+                z-index: 998;
+                top: 144px;
+                height: fit-content;
+                border-radius: 16px;
+                display: flex;
+                padding: 32px;
+                box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu {
+            display: block;
+        }
+
+        .right > #projects_button, .right > #aboutme_button {
+            display: none;
+        }
+
+        li {
+            background: #23262d81;
+            padding: 16px 32px;
+        }
+
+        .active {
+            left: 16px !important;
+        }
+    }
+
+    @media screen and (max-width: 300px) {
+        h3 {
+            display: none;
+        }
+
+        .left, .right {
+            padding: 24px 24px;
+        }
+    }
+
+</style>
+
+<script>
+    const activateButton = document.getElementById("activate");
+    activateButton?.classList.toggle("bx");
+    activateButton?.classList.toggle("bx-menu-alt-right");
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const toggleBar = () => {
+        const sidebar = document.querySelector("#sidebar");
+
+        sidebar?.classList.toggle("active");
+        activateButton?.classList.toggle("bxs-x-circle");
+      };
+    
+      activateButton?.addEventListener("click", toggleBar);
+    });
+    </script>

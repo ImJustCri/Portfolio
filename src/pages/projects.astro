@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectsShow from '../components/ProjectsShow.astro';
+import NavBar from '../components/NavBar.astro';
+---
+
+<Layout title="ImJustCri | About Me">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <NavBar/>
+    <div id="projectsDiv">
+        <h1>My Projects</h1>
+        <ProjectsShow/>
+    </div>
+
+</Layout>
+
+<style>
+    html {
+		background-color: var(--bg);
+		animation: appear 500ms ease-in;
+	}
+
+    h1 {
+	    color: white;
+        text-align: center;
+        font-size: 32px;
+        margin: 96px 0 64px 0;
+    }
+
+    #projectsDiv {
+
+        margin: auto;
+        max-width: 1800px;
+        
+    }
+
+    @keyframes appear {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+</style>

@@ -1,67 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { LOGO, SHORT_DESCRIPTION, NAME } from '../config/config';
 import Card from '../components/Card.astro';
-import Socials from '../components/Socials.astro';
-import Footer from '../components/Footer.astro';
+import NavBar from '../components/NavBar.astro';
+import Presentation from '../components/Presentation.astro';
 ---
 
-<Layout title="ImJustCri">
+<Layout title="ImJustCri | Home">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+	<NavBar></NavBar>
+
 	<main>
-		<div class="logo_div">
-			<img src={LOGO} alt="logo" class="logo"/>
-		</div>
-
-		<h1 class="text-gradient">{NAME}</h1>
-
-		<p class="about_me">
-			{SHORT_DESCRIPTION}
-		</p>
-
-		<div class="socials">
-			<div style="display: flex; gap: 12px">
-				<Socials
-					title="github"
-					href="https://github.com/ImJustCri"
-					icon="bx bxl-github"
-					name= "GitHub"
-				/>
-
-				<Socials
-					title="figma"
-					href="https://www.figma.com/@imcri"
-					icon="bx bxl-figma"
-					name= "Figma"
-				/>				
+		<div class="centeredDiv">
+			<div class="presentationDiv">
+				<Presentation></Presentation>
 			</div>
-
-			<Socials
-				title="about me"
-				href="#aboutme"
-				icon="bx bxs-user-badge"
-				name= "About me"
-			/>
 		</div>
-
-		<ul role="list" class="link-card-grid">
-			<Card i= {0}/>
-			<Card i= {1}/>
-			<Card i= {2}/>
-		</ul>
 	</main>
-
-	<section id="aboutme">
-		<Footer></Footer>
-	</section>
 </Layout>
 
 <style>
 
 	html {
 		background-color: var(--bg);
-		animation: appear 1000ms ease-in;
+		animation: appear 500ms ease-in;
 	}
 
 	@keyframes appear {
@@ -72,22 +34,9 @@ import Footer from '../components/Footer.astro';
 			opacity: 1;
 		}
 	}
-
-	.logo_div {
-		margin: auto;
-		text-align: center;
-	}
-	
-	.logo {
-		width: 88px;
-		height: auto;
-		margin-top: 40px;
-		border-radius: 100%;
-	}
 	
 	main {
 		margin: auto;
-		padding-top: 4rem;
 		width: 1800px;
 		max-width: calc(100% - 2rem);
 		color: white;
@@ -95,87 +44,15 @@ import Footer from '../components/Footer.astro';
 		line-height: 1.6;
 		position: relative;
   		z-index: 1;
-  		min-height: 100vh;
+  		max-height: 100vh;
 	}
 
-	h1 {
-		font-size: clamp(2.369rem, 3vw + 1rem, 3.157rem);
-		font-weight: 600;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 0;
-		margin-top: 16px;
-	}
-
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-
-	.link-card-grid {
-		display: grid;
-		align-items: center;
-		grid-template-columns: repeat(3, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-
-	.about_me {
-		text-align: center;
-		font-size: 1.25rem;
-	}
-
-	.socials {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		align-content: center;
-		width: auto;
-		height: fit-content;
-		gap: 12px;
+	.centeredDiv {
 		margin: auto;
-		margin-bottom: 128px;
-		margin-top: 32px;
+		display: flex;
+		height: 85vh;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
 	}
-
-	@media screen and (max-width: 1230px) {
-		.link-card-grid {
-			grid-template-columns: repeat(1, minmax(24ch, 1fr));
-		}
-
-		body {
-    		background-position: -1000px;
-			animation: bgSlide 20000ms infinite alternate;
-		}
-
-		@keyframes bgSlide {
-			to {
-				background-position: -800px;
-			}
-		}
-
-		.socials {
-			flex-direction: column;
-		}
-		
-	}
-
-	.footer {
-  		background: #746060;
-  		position: sticky;
-  		bottom: 0;
-  		height: 300px;
-  		color: #eee;
-	}
-
 </style>

@@ -2,45 +2,8 @@
 import Socials from "./Socials.astro"
 ---
 
-<footer>
-    <!-- <div id="flex">
-        <box-icon type='solid' name='user-badge' color="white" size="40px"></box-icon>
-        <h1>About Me</h1>
-    </div>
-    
-    <div id="grid">
-        <div id="left">
-    
-            <p>
-                I'm an IT student based in Italy. 
-                <br>I'm currently focusing on Web Development with Astro/TypeScript 
-                <br>and Android App Development with Kotlin.
-                <br>Besides that, I am a self taught UI Designer using Figma and PenPot
-            </p>
-        </div>
-    
-        <div id="right">
-            <p>
-                Languages I know include: 
-                <br>TypeScript, JavaScript, Java, Python, GDScript, Kotlin...
-                <br>
-                <br>If you want to know more, please check my GitHub profile
-            </p>
-            
-            <Socials
-                title="github"
-                href="https://github.com/ImJustCri"
-                icon="bx bxl-github"
-                name= "GitHub"
-            />
-        </div>
-    </div> -->
+<section id="aboutme">
     <div class="w800">
-        <div id="flex">
-            <box-icon type='solid' name='user-badge' color="white" size="40px"></box-icon>
-            <h1>About Me</h1>
-        </div>
-        
         <p>
             I'm an IT student based in Italy. 
             <br>I'm currently focusing on Web Development with Astro/TypeScript 
@@ -51,7 +14,10 @@ import Socials from "./Socials.astro"
         <p>
             Languages I know include: 
             TypeScript, JavaScript, Java, Python, GDScript, Kotlin and Dart.
-            <br>If you want to know more, please check my GitHub profile
+        </p>
+
+        <p>
+            To know more, please check my GitHub profile
         </p>
 
         <Socials
@@ -61,20 +27,18 @@ import Socials from "./Socials.astro"
             name= "GitHub"
         />
     </div>
-</footer>
+</section>
 
 <style>
-    footer {
-        background-image: url(/Portfolio/pattern.svg);
+    #aboutme {
         background-repeat: no-repeat;
-        padding: 64px 16px;
-        background-color: #23262d5b;
+        padding: 0 16px;
         color: #868c96;
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
-        margin-top: 32px;
         min-height: 300px;
         max-height: 1200px;
+        margin-bottom: 64px;
     }
 
     .w800 {
@@ -92,17 +56,6 @@ p {
     margin: 40px 0;
     text-align: left;
     font-size: 24px;
-}
-
-#flex {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-h1 {
-    text-align: left;
-    color: white;
 }
 
 #left {
