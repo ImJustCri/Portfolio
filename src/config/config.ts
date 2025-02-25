@@ -10,7 +10,7 @@ const PROJECT_PICTURES = [
 
 export const PROJECTS = [
     {
-        projectHref: "projects/capacitameritoinclusione",
+        projectHref: "capacitameritoinclusione",
         title: "Capacità Merito Inclusione",
         body: "Website made and mantained using WordPress",
         imagePath: PROJECT_PICTURES[0],
@@ -18,7 +18,7 @@ export const PROJECTS = [
         chip_style: 'background: #3858E9',
     },
     {
-        projectHref: "projects/bancaonline",
+        projectHref: "bancaonline",
         title: "BancaOnline",
         body: "A bank dashboard made in Astro for a school project",
         imagePath: PROJECT_PICTURES[1],
@@ -26,7 +26,7 @@ export const PROJECTS = [
         chip_style: 'background: #FF5B03',
     },
     {
-        projectHref: "projects/deliveryappui",
+        projectHref: "deliveryappui",
         title: "Delivery App UI",
         body: "UI Concept made on Figma",
         imagePath: PROJECT_PICTURES[2],
