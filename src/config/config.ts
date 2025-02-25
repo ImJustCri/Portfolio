@@ -10,7 +10,7 @@ const PROJECT_PICTURES = [
 
 export const PROJECTS = [
     {
-        href: "https://capacitameritoinclusione.it",
+        projectHref: "projects/capacitameritoinclusione",
         title: "Capacità Merito Inclusione",
         body: "Website made and mantained using WordPress",
         imagePath: PROJECT_PICTURES[0],
@@ -18,7 +18,7 @@ export const PROJECTS = [
         chip_style: 'background: #3858E9',
     },
     {
-        href: "https://github.com/ImJustCri/bancaonline",
+        projectHref: "projects/bancaonline",
         title: "BancaOnline",
         body: "A bank dashboard made in Astro for a school project",
         imagePath: PROJECT_PICTURES[1],
@@ -26,7 +26,7 @@ export const PROJECTS = [
         chip_style: 'background: #FF5B03',
     },
     {
-        href: "https://www.figma.com/proto/M03SsYJp4BAGZaz7NfkDnj/Food-Delivery-App?page-id=1%3A3&node-id=69-379&node-type=frame&viewport=-2164%2C252%2C0.48&t=xoJHMcWoDkufL81V-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=69%3A379",
+        projectHref: "projects/deliveryappui",
         title: "Delivery App UI",
         body: "UI Concept made on Figma",
         imagePath: PROJECT_PICTURES[2],

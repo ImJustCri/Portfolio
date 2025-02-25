@@ -1,9 +1,16 @@
 ---
 import { LOGO, SHORT_DESCRIPTION, NAME } from '../config/config';
+
+interface Props {
+    projectsHref: string;
+    aboutHref: string;
+}
+
+const { projectsHref, aboutHref } = Astro.props;
 ---
 
 <nav>
-    <a href="/Portfolio/" id="index">
+    <a href="/Portfolio" id="index">
         <div class="left">
             <img src={LOGO} alt="">
             <h3>ImJustCri</h3>
@@ -12,14 +19,14 @@ import { LOGO, SHORT_DESCRIPTION, NAME } from '../config/config';
 
     <div class="right">
         <i class="menu" id="activate"></i>
-        <a href="projects" id="projects_button"><li><i class="bx bx-code"></i> Projects</li></a>
-        <a href="aboutme" id="aboutme_button"><li><i class="bx bxs-user-badge"></i> About Me</li></a> 
+        <a href={projectsHref} id="projects_button"><li><i class="bx bx-code"></i> Projects</li></a>
+        <a href={aboutHref} id="aboutme_button"><li><i class="bx bxs-user-badge"></i> About Me</li></a> 
     </div>
 </nav>
 
 <div id="sidebar">
-    <a href="projects" id="projects"><li><i class="bx bx-code"></i> Projects</li></a>
-    <a href="aboutme" id="aboutme"><li><i class="bx bxs-user-badge"></i> About Me</li></a> 
+    <a href={projectsHref} id="projects"><li><i class="bx bx-code"></i> Projects</li></a>
+    <a href={aboutHref} id="aboutme"><li><i class="bx bxs-user-badge"></i> About Me</li></a> 
 </div>
 
 <style>

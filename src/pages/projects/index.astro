@@ -1,13 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ProjectsShow from '../components/ProjectsShow.astro';
-import NavBar from '../components/NavBar.astro';
+import Layout from '../../layouts/Layout.astro';
+import ProjectsShow from '../../components/ProjectsShow.astro';
+import NavBar from '../../components/NavBar.astro';
 ---
 
 <Layout title="ImJustCri | About Me">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <NavBar/>
+    <NavBar
+        projectsHref="",
+        aboutHref='aboutme'
+    />
 
     <div id="projectsDiv">
         <h1>My Projects</h1>
