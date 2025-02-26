@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NavBar from '../components/NavBar.astro';
+import Chip from '../components/Chip.astro';
+import { PROJECTS } from '../config/config';
 const { frontmatter } = Astro.props;
 ---
 
@@ -14,11 +16,19 @@ const { frontmatter } = Astro.props;
 
     <div id="projectDiv">
         <h1>{ frontmatter.title }</h1>
-        <div id="imageDiv">
-            <img src= { frontmatter.image } id="projectImage">
+
+        <div id="chipDiv">
+            <Chip
+			    chip_label= {PROJECTS[frontmatter.i].chip_label}
+			    chip_style={PROJECTS[frontmatter.i].chip_style}
+		    />
         </div>
 
         <div id="textDiv">
+            <div id="imageDiv">
+                <img src= { frontmatter.image } id="projectImage">
+            </div>
+
             <p>
                 <slot/>
             </p>
@@ -46,7 +56,13 @@ const { frontmatter } = Astro.props;
     h1 {
         text-align: center;
         font-size: 32px;
-        margin: 96px 0 64px 0;
+        margin: 96px 0 32px 0;
+    }
+
+    #chipDiv {
+        margin: auto;
+        max-width: fit-content;
+        margin-bottom: 32px;
     }
 
     p {
@@ -66,7 +82,7 @@ const { frontmatter } = Astro.props;
     }
 
     #imageDiv {
-        width: 90%;
+        width: auto;
         margin: auto;
     }
 

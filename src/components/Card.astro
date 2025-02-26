@@ -1,5 +1,6 @@
 ---
 import { PROJECTS } from "../config/config";
+import Chip from "./Chip.astro";
 
 interface Props {
 	i: number;
@@ -20,9 +21,10 @@ const { i } = Astro.props;
 				{PROJECTS[i].body}
 			</p>
 
-			<div id="chip" style={PROJECTS[i].chip_style}>
-				{PROJECTS[i].chip_label}
-			</div>
+			<Chip
+				chip_label= {PROJECTS[i].chip_label}
+				chip_style={PROJECTS[i].chip_style}
+			/>
 		</div>
 	</a>
 
@@ -84,17 +86,5 @@ const { i } = Astro.props;
 
 	.content {
 		margin: 0 16px 32px 16px;
-	}
-
-	#chip {
-		margin-top: 24px;
-		width: fit-content;
-		min-width: 32px;
-		height: 16px;
-		padding: 16px 16px;
-		background: rgb(185, 74, 74);
-		border-radius: 24px;
-		display: flex;
-		align-items: center;
 	}
 </style>

@@ -1,0 +1,26 @@
+---
+export interface Props {
+    chip_style: string;
+    chip_label: string;
+}
+
+const { chip_style, chip_label } = Astro.props;
+---
+
+<div id="chip" style={chip_style}>
+    {chip_label}
+</div>
+
+<style>
+    #chip {
+		margin-top: 24px;
+		width: fit-content;
+		min-width: 32px;
+		height: 16px;
+		padding: 16px 16px;
+		background: rgb(185, 74, 74);
+		border-radius: 24px;
+		display: flex;
+		align-items: center;
+	}
+</style>

@@ -3,6 +3,7 @@ title: 'Capacità Merito Inclusione'
 image: "/Portfolio/projects_photos/cmi.png"
 layout: "../../layouts/Project.astro"
 href: "https://capacitameritoinclusione.it/"
+i: 0
 ---
 
 ___
