@@ -1,6 +1,6 @@
 ---
 title: 'BancaOnline'
-image: "/Portfolio/projects_photos/bancaonline.png"
+image: "/projects_photos/bancaonline.png"
 layout: "../../layouts/Project.astro"
 href: "https://github.com/ImJustCri/bancaonline"
 i: 1

@@ -1,7 +1,7 @@
-export const LOGO = "/Portfolio/logo.png";
+export const LOGO = "/logo.png";
 export const NAME = "ImJustCri";
 export const SHORT_DESCRIPTION = "Italian IT Student and Developer";
-const IMG_PATH_START = "/Portfolio/projects_photos/"
+const IMG_PATH_START = "projects_photos/"
 
 const PROJECT_PICTURES = [
     "cmi.png",
@@ -12,7 +12,7 @@ const PROJECT_PICTURES = [
 
 export const PROJECTS = [
     {
-        projectHref: "capacitameritoinclusione",
+        projectHref: "projects/capacitameritoinclusione",
         title: "Capacità Merito Inclusione",
         body: "Website made and mantained using WordPress",
         imagePath: IMG_PATH_START + PROJECT_PICTURES[0],
@@ -20,7 +20,7 @@ export const PROJECTS = [
         chip_style: 'background: #3858E9',
     },
     {
-        projectHref: "bancaonline",
+        projectHref: "projects/bancaonline",
         title: "BancaOnline",
         body: "A bank dashboard made in Astro for a school project",
         imagePath: IMG_PATH_START + PROJECT_PICTURES[1],
@@ -28,7 +28,7 @@ export const PROJECTS = [
         chip_style: 'background: #FF5B03',
     },
     {
-        projectHref: "deliveryappui",
+        projectHref: "projects/deliveryappui",
         title: "Delivery App UI",
         body: "UI Concept made on Figma",
         imagePath: IMG_PATH_START + PROJECT_PICTURES[2],
@@ -36,7 +36,7 @@ export const PROJECTS = [
         chip_style: 'background: #dd4848',
     },
     {
-        projectHref: "studyswap",
+        projectHref: "projects/studyswap",
         title: "StudySwap",
         body: "Mobile App for students (WIP)",
         imagePath: IMG_PATH_START + PROJECT_PICTURES[3],
