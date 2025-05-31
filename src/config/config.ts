@@ -1,7 +1,7 @@
 export const LOGO = "/logo.png";
 export const NAME = "ImJustCri";
 export const SHORT_DESCRIPTION = "Italian IT Student and Developer";
-const IMG_PATH_START = "projects_photos/"
+const IMG_PATH_START = "/projects_photos/"
 
 const PROJECT_PICTURES = [
     "cmi.png",
