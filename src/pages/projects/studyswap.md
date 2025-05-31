@@ -1,6 +1,6 @@
 ---
 title: 'StudySwap'
-image: "/Portfolio/projects_photos/studyswap.png"
+image: "/projects_photos/studyswap.png"
 layout: "../../layouts/Project.astro"
 href: "https://studyswapp.netlify.app/"
 i: 3
