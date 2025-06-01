@@ -1,42 +1,67 @@
-# Portfolio Template
+# ImJustCri's Portfolio
 
-This repository features my own portfolio made in Astro.
+A personal portfolio website built with **Astro**. This template is designed to showcase projects, highlight your skills, and connect with potential collaborators or employers.
+
+## Demo
+
+Check out a live demo: [https://imjustcri.netlify.app/](https://imjustcri.netlify.app/)
 
 ## Features
 
-- Responsive design
+- Responsive design for all devices
 - Project showcase with links and descriptions
 - Social media integration
+- Easy to customize and deploy
 
 ## Technologies Used
 
 - **Astro**: Static site generator
 - **Boxicons**: Icon library for social media
 
-## Installation
+## Getting Started
 
-Make sure you have [Node.js](https://nodejs.org/en/download/package-manager) and npm (Node Package Manager) installed on your computer before proceeding with the installation.
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/package-manager) and npm installed
+
+### Installation
+
 Clone the repository and install dependencies:
 
-### Git
+#### Using Git
+
 ```bash
-git clone https://github.com/ImJustCri/Porfolio.git
+git clone https://github.com/ImJustCri/Portfolio.git
+cd Portfolio
+npm install
 ```
 
-### Github CLI
+#### Using GitHub CLI
+
 ```bash
 gh repo clone ImJustCri/Portfolio
-```
-
-Then execute the following commands, in order:
-```bash
 cd Portfolio
-npm i
+npm install
 ```
 
-## Usage
+### Running the Development Server
 
-Run the development server:
 ```bash
 npm run dev
 ```
+
+Your site will be available at `http://localhost:4321` (default Astro port).
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Made with ❤️ by [ImJustCri](https://github.com/ImJustCri)
