@@ -2,7 +2,7 @@
 title: 'StudySwap'
 image: "/projects_photos/studyswap.png"
 layout: "../../layouts/Project.astro"
-href: "https://studyswapp.netlify.app/"
+href: "https://studyswap.it/"
 i: 3
 ---
 
