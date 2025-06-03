@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import NavBar from '../components/NavBar.astro';
 import Presentation from '../components/Presentation.astro';
 ---
@@ -13,47 +12,11 @@ import Presentation from '../components/Presentation.astro';
 	
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-	<main>
-		<div class="centeredDiv">
+	<main class="mx-auto w-[1800px] max-w-[calc(100%-2rem)] text-white text-[20px] leading-[1.6] relative z-1 max-h-screen">
+		<div class="flex justify-center items-center h-[82vh]">
 			<div class="presentationDiv">
 				<Presentation></Presentation>
 			</div>
 		</div>
 	</main>
 </Layout>
-
-<style>
-
-	html {
-		background-color: var(--bg);
-		animation: appear 500ms ease-in;
-	}
-
-	@keyframes appear {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-	
-	main {
-		margin: auto;
-		width: 1800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-		position: relative;
-  		z-index: 1;
-  		max-height: 100vh;
-	}
-
-	.centeredDiv {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 82vh;
-	}
-</style>

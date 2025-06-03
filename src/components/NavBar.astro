@@ -12,7 +12,7 @@ const { projectsHref, aboutHref } = Astro.props;
 <nav>
     <a href="/" id="index">
         <div class="left">
-            <img src={LOGO} alt="">
+            <img src={LOGO} alt="" class="w-[40px] h-[40px]">
             <h3>ImJustCri</h3>
         </div>
     </a>
@@ -25,8 +25,14 @@ const { projectsHref, aboutHref } = Astro.props;
 </nav>
 
 <div id="sidebar">
-    <a href={projectsHref} id="projects"><li><i class="bx bx-code"></i> Projects</li></a>
-    <a href={aboutHref} id="aboutme"><li><i class="bx bxs-user-badge"></i> About Me</li></a> 
+    <a href={projectsHref} id="projects">
+        <li>
+            <i class="bx bx-code"></i> Projects
+        </li>
+    </a>
+    <a href={aboutHref} id="aboutme">
+        <li><i class="bx bxs-user-badge"></i> About Me</li>
+    </a> 
 </div>
 
 <style>
@@ -57,11 +63,6 @@ const { projectsHref, aboutHref } = Astro.props;
 		color: white;
 		font-size: 20px;
   		z-index: 999;
-    }
-
-    img {
-        width: 40px;
-        height: 40px;
     }
 
     .left, .right {
@@ -100,13 +101,6 @@ const { projectsHref, aboutHref } = Astro.props;
     .menu {
         font-size: 32px;
         display: none;
-    }
-
-    a {
-        text-decoration: none;
-        margin: none;
-        padding: none;
-        color: white;
     }
 
     @media screen and (max-width: 800px) {

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+a {
+    text-decoration: none;
+    margin: none;
+    padding: none;
+    color: white;
+}
+
+:root {
+	--accent: 51, 81, 214;
+	--accent-light: 102, 125, 228;
+	--accent-dark: 49, 10, 101;
+	--bg: #000000;
+	--accent-gradient: linear-gradient(
+		45deg,
+		rgb(var(--accent)),
+		rgb(var(--accent-light)) 30%,
+		white 60%
+	);
+}
+
+html {
+    font-family: 'Poppins', system-ui, sans-serif;
+    background-color: var(--bg);
+	animation: appear 500ms ease-in;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background-image: url(/pattern.svg);
+	background-repeat: no-repeat;
+	background-position: 0px;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+
+@keyframes bgSlide {
+		to {
+			background-position: 40px;
+		}
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+
+	body {
+		background-position: -400px;
+	}
+
+}

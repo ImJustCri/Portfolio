@@ -3,17 +3,17 @@ import { LOGO, SHORT_DESCRIPTION, NAME } from '../config/config';
 import Socials from '../components/Socials.astro';
 ---
 
-<div class="logo_div">
-    <img src={LOGO} alt="logo" class="logo"/>
+<div class="m-auto text-center">
+    <img src={LOGO} alt="logo" class="w-[104px] h-auto mt-10 rounded-full"/>
 </div>
 
-<h1 class="text-gradient">{NAME}</h1>
+<h1 class="text-[clamp(2.369rem,3vw+1rem,3.157rem)] font-semibold leading-none text-center mb-0 mt-4 text-gradient">{NAME}</h1>
 
-<p class="about_me">
+<p class="text-center text-xl">
     {SHORT_DESCRIPTION}
 </p>
 
-<div class="socials">
+<div class="flex justify-center items-center gap-3 mx-auto mt-8 mb-32 max-[1230px]:flex-col">
     <div style="display: flex; gap: 12px">
         <Socials
             title="github"
@@ -39,64 +39,11 @@ import Socials from '../components/Socials.astro';
 </div>
 
 <style>
-	.logo_div {
-		margin: auto;
-		text-align: center;
-	}
-	
-	.logo {
-		width: 104px;
-		height: auto;
-		margin-top: 40px;
-		border-radius: 100%;
-	}
-
-    h1 {
-		font-size: clamp(2.369rem, 3vw + 1rem, 3.157rem);
-		font-weight: 600;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 0;
-		margin-top: 16px;
-	}
-
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
-	}
-
-	.about_me {
-		text-align: center;
-		font-size: 1.25rem;
-	}
-
-	.socials {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		align-content: center;
-		width: auto;
-		height: fit-content;
-		gap: 12px;
-		margin: auto;
-		margin-bottom: 128px;
-		margin-top: 32px;
-	}
-
-	@media screen and (max-width: 1230px) {
-
-		@keyframes bgSlide {
-			to {
-				background-position: -800px;
-			}
-		}
-
-		.socials {
-			flex-direction: column;
-		}
-		
 	}
 </style>

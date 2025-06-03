@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 interface Props {
 	title: string;
 }
@@ -23,52 +25,3 @@ const { title } = Astro.props;
 </html>
 
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-:root {
-	--accent: 51, 81, 214;
-	--accent-light: 102, 125, 228;
-	--accent-dark: 49, 10, 101;
-	--bg: #000000;
-	--accent-gradient: linear-gradient(
-		45deg,
-		rgb(var(--accent)),
-		rgb(var(--accent-light)) 30%,
-		white 60%
-	);
-}
-
-html {
-	font-family: 'Poppins', system-ui, sans-serif;
-	background: #13151a;
-}
-
-a {
-	text-decoration: none;
-}
-
-body {
-	background-image: url(/pattern.svg);
-	background-repeat: no-repeat;
-	background-position: 0px;
-	background-size: cover;
-	margin: 0;
-	padding: 0;
-}
-
-@keyframes bgSlide {
-		to {
-			background-position: 40px;
-		}
-}
-
-@media screen and (max-width: 1230px) {
-
-	body {
-		background-position: -400px;
-	}
-
-}
-</style>
