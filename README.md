@@ -1,5 +1,7 @@
 # ImJustCri's Portfolio
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9600d2d8-9966-4952-847f-ec7aae507d52/deploy-status)](https://app.netlify.com/projects/imjustcri/deploys)
+
 A personal portfolio website built with **Astro**. This template is designed to showcase projects, highlight your skills, and connect with potential collaborators or employers.
 
 ## Demo
