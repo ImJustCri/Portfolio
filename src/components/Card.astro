@@ -11,13 +11,13 @@ const { i } = Astro.props;
 
 <li class="link-card">
 	
-	<a href= {PROJECTS[i].projectHref}>
-		<img src={PROJECTS[i].imagePath} alt="" class="projectImage">
-		<div class="content">
-			<h2>
+	<a href= {PROJECTS[i].projectHref} class="w-full no-underline leading-[1.4] p-[8px] rounded-[8px] text-white bg-[#23262d] opacity-[0.8]">
+		<img src={PROJECTS[i].imagePath} alt="" class="w-full h-auto rounded-[4px] mb-[32px]">
+		<div class="m-0 mx-[16px] mb-[32px]">
+			<h2 class="m-0 text-[1.35rem] transition-colors duration-600 ease-[cubic-bezier(0.22,1,0.36,1)]">
 				{PROJECTS[i].title}
 			</h2>
-			<p>
+			<p class="mt-[8px] text-[#9ba7b9] mb-0">
 				{PROJECTS[i].body}
 			</p>
 
@@ -30,7 +30,6 @@ const { i } = Astro.props;
 
 </li>
 <style>
-
 	.link-card {
 		list-style: none;
 		display: flex;
@@ -42,27 +41,7 @@ const { i } = Astro.props;
 		transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 8px;
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
 
-	h2 {
-		margin: 0;
-		font-size: 1.35rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		color: #9ba7b9;
-		margin-bottom: 0;
-	}
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
 		background-image: var(--accent-gradient);
@@ -75,16 +54,5 @@ const { i } = Astro.props;
 
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light));
-	}
-
-	.projectImage {
-		width: 100%;
-		height: auto;
-		border-radius: 4px;
-		margin-bottom: 32px;
-	}
-
-	.content {
-		margin: 0 16px 32px 16px;
 	}
 </style>

@@ -2,21 +2,21 @@
 import Socials from "./Socials.astro"
 ---
 
-<section id="aboutme">
-    <div class="w800">
-        <p>
+<section id="aboutme" class="bg-no-repeat px-4 text-[#868c96] rounded-t-lg min-h-[300px] max-h-[1200px] mb-16 max-[1230px]:gap-2">
+    <div class="w-[800px] max-w-[800px] mx-auto  max-[1230px]:w-auto max-[1230px]:max-w-full max-[1230px]:mx-auto">
+        <p class="my-10 text-left text-[24px]">
             I'm an IT student based in Italy. 
             <br>I'm currently focusing on Web Development with Astro/TypeScript 
             and Android App Development with Kotlin.
             Besides that, I am a self taught UI Designer using Figma and PenPot
         </p>
 
-        <p>
+        <p class="my-10 text-left text-[24px]">
             Languages I know include: 
             TypeScript, JavaScript, Java, Python, GDScript, Kotlin and Dart.
         </p>
 
-        <p>
+        <p class="my-10 text-left text-[24px]">
             To know more, please check my GitHub profile
         </p>
 
@@ -28,64 +28,3 @@ import Socials from "./Socials.astro"
         />
     </div>
 </section>
-
-<style>
-    #aboutme {
-        background-repeat: no-repeat;
-        padding: 0 16px;
-        color: #868c96;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-        min-height: 300px;
-        max-height: 1200px;
-        margin-bottom: 64px;
-    }
-
-    .w800 {
-        width: 800px;
-        max-width: 800px;
-        margin: auto;
-    }
-
-    #grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    }
-
-p {
-    margin: 40px 0;
-    text-align: left;
-    font-size: 24px;
-}
-
-#left {
-    max-width: 800px;
-    margin: 0 64px;
-}
-
-#right {
-    max-width: 800px;
-    margin: 0 64px;
-}
-
-@media screen and (max-width: 1230px) {
-    #flex {
-        gap: 8px;
-    }
-
-    #grid {
-        grid-template-columns: repeat(auto-fit, minmax(32ch, 1fr));
-    }
-
-    p {
-        margin: 24px 0;
-    }
-
-    .w800 {
-        width: auto;
-        max-width: 100vw;
-        margin: auto;
-    }
-}
-
-</style>
