@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import NavBar from '../components/NavBar.astro';
 import Chip from '../components/Chip.astro';
 import { PROJECTS } from '../config/config';
+import { Image } from 'astro:assets';
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -10,8 +12,8 @@ const { frontmatter } = Astro.props;
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <NavBar
-        projectsHref="../../projects",
-        aboutHref='../../aboutme',
+        projectsHref="../../projects"
+        aboutHref='../../aboutme'
     />
 
     <div id="projectDiv">
@@ -26,7 +28,14 @@ const { frontmatter } = Astro.props;
 
         <div id="textDiv">
             <div id="imageDiv">
-                <img src= { frontmatter.image } id="projectImage">
+                <Image
+                        src={frontmatter.image}
+                        alt="project"
+                        width=50
+                        height=50
+                        class=" w-full h-auto rounded-[16px]"
+                        loading="eager"
+                />
             </div>
 
             <p>
@@ -60,9 +69,8 @@ const { frontmatter } = Astro.props;
     }
 
     #chipDiv {
-        margin: auto;
         max-width: fit-content;
-        margin-bottom: 32px;
+        margin: auto auto 32px;
     }
 
     p {
@@ -93,19 +101,17 @@ const { frontmatter } = Astro.props;
 
     #textDiv {
         max-width: 800px;
-        margin: auto;
-        margin-top: 64px;
+        margin: 64px auto auto;
     }
 
     #projectLink {
         margin: 32px 0;
         width: fit-content;
         padding: 16px;
-        background: #23262d7c;
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
         border-radius: 16px;
-        background-position: 100%;
-		transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        background: #23262d7c 100%;
+        transition: 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         background-size: 400%;
     }
 

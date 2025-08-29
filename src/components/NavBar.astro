@@ -1,5 +1,6 @@
 ---
-import { LOGO, SHORT_DESCRIPTION, NAME } from '../config/config';
+import { LOGO } from '../config/config';
+import { Image } from 'astro:assets';
 
 interface Props {
     projectsHref: string;
@@ -12,7 +13,16 @@ const { projectsHref, aboutHref } = Astro.props;
 <nav>
     <a href="/" id="index">
         <div class="left">
-            <img src={LOGO} alt="" class="w-[40px] h-[40px]">
+            <Image
+                    src={LOGO}
+                    alt=""
+                    width={40}
+                    height={40}
+                    class="w-[40px] h-[40px]"
+                    loading="eager"
+            />
+
+
             <h3>ImJustCri</h3>
         </div>
     </a>
@@ -45,10 +55,9 @@ const { projectsHref, aboutHref } = Astro.props;
         left: 0;
         height: fit-content;
         width: fit-content;
-        padding: 16px;
         gap: 16px;
         margin: 0;
-        padding-top: 40px;
+        padding: 40px 16px 16px;
         background: #23262d7c;
         backdrop-filter: blur(20px);
     }

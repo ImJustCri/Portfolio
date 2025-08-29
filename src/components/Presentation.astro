@@ -1,10 +1,18 @@
 ---
+import { Image } from 'astro:assets';
 import { LOGO, SHORT_DESCRIPTION, NAME } from '../config/config';
 import Socials from '../components/Socials.astro';
 ---
 
 <div class="m-auto text-center">
-    <img src={LOGO} alt="logo" class="w-[104px] h-auto mt-10 rounded-full"/>
+    <Image
+            src={LOGO}
+            alt="logo"
+            width={104}
+            height={104}
+            class="w-[104px] h-auto mt-10 rounded-full"
+            loading="eager"
+    />
 </div>
 
 <h1 class="text-[clamp(2.369rem,3vw+1rem,3.157rem)] font-semibold leading-none text-center mb-0 mt-4 text-gradient">{NAME}</h1>

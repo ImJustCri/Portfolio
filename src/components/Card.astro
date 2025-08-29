@@ -1,6 +1,7 @@
 ---
 import { PROJECTS } from "../config/config";
 import Chip from "./Chip.astro";
+import { Picture } from 'astro:assets';
 
 interface Props {
 	i: number;
@@ -11,9 +12,20 @@ const { i } = Astro.props;
 
 <li class="link-card">
 	
-	<a href= {PROJECTS[i].projectHref} class="w-full no-underline leading-[1.4] p-[8px] rounded-[8px] text-white bg-[#23262d] opacity-[0.8]">
-		<img src={PROJECTS[i].imagePath} alt="" class="w-full h-auto rounded-[4px] mb-[32px]">
-		<div class="m-0 mx-[16px] mb-[32px]">
+	<a href= {PROJECTS[i].projectHref} class="w-full no-underline leading-[1.4] p-[8px] rounded-[24px] text-white bg-[#23262d] opacity-[0.8]">
+		<!--<img src={PROJECTS[i].imagePath} alt="" class="w-full h-auto rounded-[16px] mb-[32px]">-->
+        <Picture
+                src={PROJECTS[i].imagePath}
+                alt=""
+                width={50}
+                height={50}
+                formats={['avif', 'webp']}
+                fallbackFormat="png"
+                class="w-full h-auto rounded-[16px] mb-[32px]"
+                loading="eager"
+        />
+
+        <div class="m-0 mx-[16px] mb-[32px]">
 			<h2 class="m-0 text-[1.35rem] transition-colors duration-600 ease-[cubic-bezier(0.22,1,0.36,1)]">
 				{PROJECTS[i].title}
 			</h2>
