@@ -1,3 +1,5 @@
+import {map} from "zod";
+
 export const LOGO = "/logo.png";
 export const NAME = "ImJustCri";
 export const SHORT_DESCRIPTION = "Italian IT Student and Developer";
@@ -44,3 +46,23 @@ export const PROJECTS = [
         chip_style: 'background: #48589D',
     },
 ];
+
+export const SKILLS = [
+    "TypeScript",
+    "Flutter",
+    "Figma",
+    "Astro",
+    "React",
+    "Godot/GDScript",
+];
+
+export const LANGUAGES = [
+    {
+        lang: "Italian (IT)",
+        level: "Native"
+    },
+    {
+        lang: "English (US)",
+        level: "C1"
+    }
+]

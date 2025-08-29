@@ -1,30 +1,56 @@
 ---
 import Socials from "./Socials.astro"
+import { SKILLS, LANGUAGES } from "../config/config"
 ---
 
 <section id="aboutme" class="bg-no-repeat px-4 text-[#868c96] rounded-t-lg min-h-[300px] max-h-[1200px] mb-16 max-[1230px]:gap-2">
-    <div class="w-[800px] max-w-[800px] mx-auto  max-[1230px]:w-auto max-[1230px]:max-w-full max-[1230px]:mx-auto">
-        <p class="my-10 text-left text-[24px]">
-            I'm an IT student based in Italy. 
-            <br>I'm currently focusing on Web Development with Astro/TypeScript 
+    <div class="w-[600px] max-w-[600px] mx-auto max-[1230px]:w-auto max-[1230px]:max-w-full max-[1230px]:mx-auto">
+        <h1 class="text-white text-left text-[32px] my-[96px] mb-4">About Me</h1>
+
+        <p class="text-left text-[18px]">
+            I'm an IT student based in Italy.
+            <br>I'm currently focusing on Web Development with Astro/TypeScript
             and Android App Development with Kotlin.
             Besides that, I am a self taught UI Designer using Figma and PenPot
         </p>
 
-        <p class="my-10 text-left text-[24px]">
-            Languages I know include: 
+        <p class="text-left text-[18px]">
+            Languages I know include:
             TypeScript, JavaScript, Java, Python, GDScript, Kotlin and Dart.
         </p>
 
-        <p class="my-10 text-left text-[24px]">
-            To know more, please check my GitHub profile
-        </p>
+        <div class="flex flex-wrap items-center gap-2">
+            <p class="text-left text-[18px]">
+                To know more, please check:
+            </p>
 
-        <Socials
-            title="github"
-            href="https://github.com/ImJustCri"
-            icon="bx bxl-github"
-            name= "GitHub"
-        />
+            <Socials
+                    title="github"
+                    href="https://github.com/ImJustCri"
+                    icon="bx bxl-github"
+                    name= "GitHub"
+            />
+        </div>
+
+        <section id="skills" class="mt-16">
+            <h2 class="text-white text-left text-[28px] mb-4">Skills</h2>
+            <div class="flex flex-wrap gap-4 text-[#868c96] text-[16px]">
+                {SKILLS.map(skill => (
+                        <div class="bg-[#23262d7c] text-white rounded-md px-4 py-2">{skill}</div>
+                ))}
+            </div>
+        </section>
+
+        <section id="languages" class="mt-16">
+            <h2 class="text-white text-left text-[28px] mb-4">Languages</h2>
+            <div class="text-[#868c96] text-[16px]">
+                {LANGUAGES.map(language => (
+                        <div class="flex justify-between">
+                            <p>{language.lang}</p>
+                            <p>{language.level}</p>
+                        </div>
+                ))}
+            </div>
+        </section>
     </div>
 </section>
