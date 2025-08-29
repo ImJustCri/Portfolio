@@ -1,17 +1,20 @@
 ---
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import { LOGO, SHORT_DESCRIPTION, NAME } from '../config/config';
 import Socials from '../components/Socials.astro';
 ---
 
 <div class="m-auto text-center">
-    <Image
+    <Picture
             src={LOGO}
             alt="logo"
             width={104}
             height={104}
             class="w-[104px] h-auto mt-10 rounded-full"
             loading="eager"
+            fetchpriority="high"
+            formats={['avif', 'webp']}
+            fallbackFormat="png"
     />
 </div>
 
@@ -52,6 +55,6 @@ import Socials from '../components/Socials.astro';
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
-		background-position: 0%;
+		background-position: 0;
 	}
 </style>
