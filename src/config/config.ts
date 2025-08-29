@@ -1,5 +1,3 @@
-import {map} from "zod";
-
 export const LOGO = "/logo.png";
 export const NAME = "ImJustCri";
 export const SHORT_DESCRIPTION = "Italian IT Student and Developer";
@@ -13,6 +11,14 @@ const PROJECT_PICTURES = [
 ];
 
 export const PROJECTS = [
+    {
+        projectHref: "studyswap",
+        title: "StudySwap",
+        body: "Mobile App for students (WIP)",
+        imagePath: IMG_PATH_START + PROJECT_PICTURES[3],
+        chip_label: 'Flutter',
+        chip_style: 'background: #48589D',
+    },
     {
         projectHref: "capacitameritoinclusione",
         title: "Capacità Merito Inclusione",
@@ -37,14 +43,6 @@ export const PROJECTS = [
         chip_label: 'Figma',
         chip_style: 'background: #dd4848',
     },
-    {
-        projectHref: "studyswap",
-        title: "StudySwap",
-        body: "Mobile App for students (WIP)",
-        imagePath: IMG_PATH_START + PROJECT_PICTURES[3],
-        chip_label: 'Flutter',
-        chip_style: 'background: #48589D',
-    },
 ];
 
 export const SKILLS = [
@@ -54,6 +52,7 @@ export const SKILLS = [
     "Astro",
     "React",
     "Godot/GDScript",
+    "Java",
 ];
 
 export const LANGUAGES = [
