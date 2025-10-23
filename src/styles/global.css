@@ -34,7 +34,7 @@ a {
 }
 
 body {
-	background-image: url(/pattern.svg);
+	background-image: url(pattern.png);
 	background-repeat: no-repeat;
 	background-position: 0px;
 	background-size: cover;
