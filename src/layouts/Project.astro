@@ -51,7 +51,8 @@ const { frontmatter } = Astro.props;
 
 <style>
     html {
-		background-color: var(--bg);
+		/* background-color: var(--bg); */
+        background-image: url(/pattern.png);
 		animation: appear 500ms ease-in;
 	}
 
@@ -132,7 +133,7 @@ const { frontmatter } = Astro.props;
 		}
 	}
 
-    @media screen and (max-width: 1230px) {
+    @media screen and (max-width: 840px) {
         #textDiv {
             margin: auto 24px;
         }
