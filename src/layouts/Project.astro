@@ -2,31 +2,30 @@
 import Layout from '../layouts/Layout.astro';
 import NavBar from '../components/NavBar.astro';
 import Chip from '../components/Chip.astro';
-import { PROJECTS } from '../config/config';
 import { Image } from 'astro:assets';
 
-const { frontmatter } = Astro.props;
+const { title, image, category, href } = Astro.props;
 ---
 
-<Layout title= { frontmatter.title }>
+<Layout title= { title }>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <NavBar/>
 
     <div id="projectDiv">
-        <h1>{ frontmatter.title }</h1>
+        <h1>{ title }</h1>
 
         <div id="chipDiv">
             <Chip
-			    chip_label= {PROJECTS[frontmatter.i].chip_label}
-			    chip_style={PROJECTS[frontmatter.i].chip_style}
+			    chip_label= {category}
+			    chip_style= "#FFFFFF"
 		    />
         </div>
 
         <div id="textDiv">
             <div id="imageDiv">
                 <Image
-                        src={frontmatter.image}
+                        src= { image }
                         alt="project"
                         width=50
                         height=50
@@ -39,7 +38,7 @@ const { frontmatter } = Astro.props;
                 <slot/>
             </p>
 
-            <a href= { frontmatter.href }>
+            <a href= { href }>
                 <div id="projectLink">
                     Check out this project
                 </div>

@@ -1,9 +1,9 @@
 ---
 title: 'BancaOnline'
+description: "A bank dashboard made in Astro for a school project"
 image: "/projects_photos/bancaonline.png"
-layout: "../../layouts/Project.astro"
 href: "https://github.com/ImJustCri/bancaonline"
-i: 1
+category: "Astro"
 ---
 
 ___

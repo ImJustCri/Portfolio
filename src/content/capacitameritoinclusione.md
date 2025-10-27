@@ -1,9 +1,9 @@
 ---
 title: 'Capacità Merito Inclusione'
+description: 'Website made and mantained using WordPress'
 image: "/projects_photos/cmi.png"
-layout: "../../layouts/Project.astro"
 href: "https://capacitameritoinclusione.it/"
-i: 0
+category: "WordPress"
 ---
 
 ___

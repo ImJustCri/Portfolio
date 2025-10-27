@@ -1,9 +1,9 @@
 ---
 title: 'StudySwap'
+description: "Mobile App for students (WIP)"
 image: "/projects_photos/studyswap.png"
-layout: "../../layouts/Project.astro"
 href: "https://studyswap.it/"
-i: 3
+category: "Flutter"
 ---
 
 ## Overview
