@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import ProjectsShow from '../../components/ProjectsShow.astro';
 import NavBar from '../../components/NavBar.astro';
+import { getCollection } from 'astro:content';
 ---
 
 <Layout title="ImJustCri | About Me">
@@ -9,9 +10,10 @@ import NavBar from '../../components/NavBar.astro';
 
     <NavBar/>
 
-    <div class="mx-auto max-w-[1800px]">
+    <div class="mx-auto">
         <h1 class="text-white text-center text-[32px] my-[96px] mb-[64px]">My Projects</h1>
         <ProjectsShow/>
+
     </div>
 
 </Layout>

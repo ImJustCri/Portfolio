@@ -53,7 +53,7 @@ const { frontmatter } = Astro.props;
     html {
 		/* background-color: var(--bg); */
         background-image: url(/pattern.png);
-		animation: appear 500ms ease-in;
+		animation: appear 300ms ease-in;
 	}
 
     * {
@@ -127,6 +127,7 @@ const { frontmatter } = Astro.props;
     @keyframes appear {
 		from {
 			opacity: 0;
+            transform: translateY(10px);
 		}
 		to {
 			opacity: 1;
